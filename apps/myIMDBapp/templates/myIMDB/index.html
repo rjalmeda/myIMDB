@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet"  type="text/css"  href="{{ static 'style.css' }}">
+    <style>
+        div.errors {
+            height: 20px;
+        }
+        input.textfield {
+            border: 1px solid black;
+            padding: 3px 4px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+    <div class="errors">
+    
+    </div>
+    <div class="movielist">
+        <h2>List of Movies</h2>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th> - </th>
+            </tr>
+            <tr>
+                <td>Jurassic Park</td>
+                <td>1993</td>
+                <td>Cast</td>
+            </tr>
+            <tr>
+                <td>Independence Day</td>
+                <td>1996</td>
+                <td>Cast</td>
+            </tr>
+            <tr>
+                <td>Independence Day Resurgance</td>
+                <td>2016</td>
+                <td>Cast</td>
+            </tr>
+            <tr>
+                <td>Equilibrium</td>
+                <td>2002</td>
+                <td>Cast</td>
+            </tr>
+            
+        </table>
+    </div>
+    <div class="addmoviediv">
+        <form action="/addmovie" method='POST'>
+            <h4>Add a movie</h4>
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td><input class='textfield' type='text' size='30' name='title'></td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td><input class='textfield' type='text' size='4' maxlength='4' name='year'></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+
+</body>
+</html>
